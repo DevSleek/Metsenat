@@ -11,6 +11,7 @@ class Sponsor(BaseModel):
     phobe_number = models.CharField(max_length=16)
 
     sponsorship_sum = models.CharField(max_length=16)
+    spent_sum = models.CharField(max_length=16, default=0)
 
     type = models.CharField(max_length=16, choices=Sponsor_type.choices, default=Sponsor_type.PHYICAL_PERSON)
     status = models.CharField(max_length=16, choices=Status.choices, default=Status.NEW)
@@ -22,15 +23,5 @@ class Sponsor(BaseModel):
     def __str__(self):
         return self.fullname
 
-    # def clean(self):
-    #     if int(self.student_sponsor.get('sponsor_allocated_sum')) >= int(self.sponsorship_sum):
-    #         raise ValidationError(
-    #             {
-    #                 'sponsorship_sum': 'Sponsor\'s spent sum must be less than or equal to sponsorship sum',
-    #             }
-    #         )
-
-    # def save(self, *args, **kwargs):
-    #     super().save(*args, **kwargs)
 
     

@@ -9,7 +9,9 @@ from utility.models import BaseModel
 class Student(BaseModel):
     fullname = models.CharField(max_length=128)
     phone_number = models.CharField(max_length=16)
+
     contract_sum = models.CharField(max_length=16)
+    allocated_sum = models.CharField(max_length=16, default=0)
 
     type = models.CharField(max_length=16, choices=Student_type.choices, default=Student_type.BACHELOR)
 
