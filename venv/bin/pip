@@ -1,4 +1,4 @@
-#!/home/sukhrob/Projects/metsenat/venv/bin/python3
+#!/home/sukhrob/Projects/Metsenat/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

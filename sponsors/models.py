@@ -8,7 +8,7 @@ from utility.models import BaseModel
 
 class Sponsor(BaseModel):
     fullname = models.CharField(max_length=128)
-    phobe_number = models.CharField(max_length=16)
+    phone_number = models.CharField(max_length=16)
 
     sponsorship_sum = models.CharField(max_length=16)
     spent_sum = models.CharField(max_length=16, default=0)
@@ -17,8 +17,6 @@ class Sponsor(BaseModel):
     status = models.CharField(max_length=16, choices=Status.choices, default=Status.NEW)
 
     date = models.DateField(auto_now_add=True)
-
-    students = models.ForeignKey(Student, on_delete=models.CASCADE, related_name='sponsor')
 
     def __str__(self):
         return self.fullname

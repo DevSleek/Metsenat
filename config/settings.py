@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     # 3rd-party packages
     'rest_framework',
     'debug_toolbar',
+    'django_filters',
 
     # local apps
     'sponsors',
@@ -117,6 +118,13 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'sponsors.filters.DateRangeFilterBackend'
+    ]
+}
 
 
 # Internationalization

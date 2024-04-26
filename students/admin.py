@@ -4,7 +4,7 @@ from students.models import Student, SponsorForStudent, OTM
 
 
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ['fullname', 'phone_number', 'otm', 'contract_sum', 'type']
+    list_display = ['fullname', 'phone_number', 'otm', 'contract_sum', 'allocated_sum', 'type']
 
 
 admin.site.register(Student, StudentAdmin)

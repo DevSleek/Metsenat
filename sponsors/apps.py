@@ -5,5 +5,3 @@ class SponsorsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'sponsors'
 
-    def ready(self):
-        import sponsors.signals
